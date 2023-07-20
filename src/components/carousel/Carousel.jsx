@@ -12,8 +12,10 @@ import dayjs from "dayjs";
 import Img from "../lazyLoadImage/Img";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import PosterFallback from "../../assets/no-poster.png";
+import CircleRating from "../circleRating/CircleRating";
 
 import "./styles.scss";
+import Genres from "../genres/Genres";
 
 const Carousel = ({ data, loading }) => {
   const carouselContainer = useRef();
@@ -59,6 +61,8 @@ const Carousel = ({ data, loading }) => {
                 <div className="carouselItem" key={item.id}>
                   <div className="posterBlock">
                     <Img src={posterUrl} alt="" />
+                    <CircleRating rating={item.vote_average.toFixed(1)} />
+                    <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                   <div className="textBlock">
                     <span className="title">
