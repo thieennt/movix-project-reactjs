@@ -6,6 +6,7 @@ import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
 import "./styles.scss";
 
 import useFetch from "../../../hooks/useFetch";
+import Carousel from "../../../components/carousel/Carousel";
 
 const Trending = () => {
   const [endpoint, setEndpoint] = useState("day");
@@ -25,6 +26,7 @@ const Trending = () => {
         <span className="carouselTitle">Trending</span>
         <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
       </ContentWrapper>
+      <Carousel data={data?.results} loading={loading} />
     </div>
   );
 };
