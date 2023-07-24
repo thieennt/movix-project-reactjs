@@ -7,6 +7,7 @@ import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/videosSection";
 import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
+import Spinner from "../../components/spinner/Spinner";
 
 const Details = () => {
   const { mediaType, id } = useParams();

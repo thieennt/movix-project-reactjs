@@ -9,12 +9,16 @@ const Recommendation = ({ mediaType, id }) => {
   );
 
   return (
-    <Carousel
-      title="Recommendation"
-      data={data?.results}
-      loading={loading}
-      endpoint={mediaType}
-    />
+    <React.Fragment>
+      {data?.results.length > 0 && (
+        <Carousel
+          title="Recommendation"
+          data={data?.results}
+          loading={loading}
+          endpoint={mediaType}
+        />
+      )}
+    </React.Fragment>
   );
 };
 

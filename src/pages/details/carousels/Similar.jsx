@@ -5,15 +5,20 @@ import useFetch from "../../../hooks/useFetch";
 
 const Similar = ({ mediaType, id }) => {
   const { data, loading, error } = useFetch(`/${mediaType}/${id}/similar`);
+  console.log("simi", data);
 
   const title = mediaType === "movie" ? "Similar Movies" : "Similar TV Shows";
   return (
-    <Carousel
-      title={title}
-      data={data?.results}
-      loading={loading}
-      endpoint={mediaType}
-    />
+    <React.Fragment>
+      {data?.results.length > 0 && (
+        <Carousel
+          title={title}
+          data={data?.results}
+          loading={loading}
+          endpoint={mediaType}
+        />
+      )}
+    </React.Fragment>
   );
 };
 
