@@ -18,13 +18,9 @@ import "./styles.scss";
 import Genres from "../genres/Genres";
 
 const Carousel = ({ data, loading, endpoint, title }) => {
-  console.log("endpoint", endpoint);
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
-  console.log("data1", data);
-
-  console.log("carouselContainer", carouselContainer);
 
   const navigation = (dir) => {
     const container = carouselContainer.current;

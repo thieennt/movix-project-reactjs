@@ -11,7 +11,6 @@ import Spinner from "../../components/spinner/Spinner";
 
 const Details = () => {
   const { mediaType, id } = useParams();
-  console.log(mediaType, id);
 
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
   const { data: credits, loading: creditsLoading } = useFetch(

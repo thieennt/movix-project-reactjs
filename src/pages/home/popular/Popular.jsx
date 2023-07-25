@@ -11,9 +11,6 @@ const Popular = () => {
 
   const { data, loading } = useFetch(`/${endpoint}/popular`);
 
-  console.log("endpoint", endpoint);
-  console.log("data popular", data);
-
   const onTabChange = (tab) => {
     setEndpoint(tab === "Movies" ? "movie" : "tv");
   };

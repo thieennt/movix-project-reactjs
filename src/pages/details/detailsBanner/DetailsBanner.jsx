@@ -16,7 +16,6 @@ import dayjs from "dayjs";
 import "./styles.scss";
 
 const DetailsBanner = ({ video, crew }) => {
-  console.log("video", video);
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
 

@@ -5,7 +5,6 @@ import useFetch from "../../../hooks/useFetch";
 
 const Similar = ({ mediaType, id }) => {
   const { data, loading, error } = useFetch(`/${mediaType}/${id}/similar`);
-  console.log("simi", data);
 
   const title = mediaType === "movie" ? "Similar Movies" : "Similar TV Shows";
   return (
